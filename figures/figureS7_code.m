@@ -79,8 +79,8 @@ errorbound(on_tfr_diff1.time(time_idx),squeeze(mean(on_tfr_diff1.powspctrm(:,:,f
     squeeze(std(on_tfr_diff1.powspctrm(:,:,freq_idx,time_idx),[],[1 3],'omitnan'))./sqrt(size(on_tfr_diff1.powspctrm(:,:,freq_idx,time_idx),1)), ...
     'color',int_color,'linewidth',5);
 plot_column_significance(on_tfr_diff1.time(time_idx),squeeze(mean(on_tfr_diff1.powspctrm(:,:,freq_idx,time_idx),3,'omitnan')), ...
-    'Color',int_color,'YOffsetRatio',-0.02,'LineWidth',5);
-xline(0,'k--','LineWidth',1.5);yline(0,'k--','LineWidth',1.5);ylim([-0.1 0.05]);
+    'Color',int_color,'YOffsetRatio',0.06,'LineWidth',5);
+xline(0,'k--','LineWidth',1.5);yline(0,'k--','LineWidth',1.5);ylim([-0.15 0.1]);
 setFixedPlotArea(ax1, [15 15],[1.8 0.8]);set(gca, 'LineWidth', 1.5,'XDir','normal'); 
 hold off;xlim([-1 0.5]);
 ylabel(sprintf('power(log)\n conflict-congruent'));
