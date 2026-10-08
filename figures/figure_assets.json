@@ -1,0 +1,1077 @@
+[
+  {
+    "script": "figure3_code.m",
+    "path": "utilities/BrainNet-Viewer/BrainNet.m",
+    "variables": []
+  },
+  {
+    "script": "figure3_code.m",
+    "path": "utilities/BrainNet-Viewer/BrainNet_MapCfg.m",
+    "variables": []
+  },
+  {
+    "script": "figure3_code.m",
+    "path": "utilities/BrainNet-Viewer/BrainNet.fig",
+    "variables": []
+  },
+  {
+    "script": "figureS5_code.m",
+    "path": "utilities/BrainNet-Viewer/BrainNet.m",
+    "variables": []
+  },
+  {
+    "script": "figureS5_code.m",
+    "path": "utilities/BrainNet-Viewer/BrainNet_MapCfg.m",
+    "variables": []
+  },
+  {
+    "script": "figureS5_code.m",
+    "path": "utilities/BrainNet-Viewer/BrainNet.fig",
+    "variables": []
+  },
+  {
+    "script": "figureS6_code.m",
+    "path": "utilities/BrainNet-Viewer/BrainNet.m",
+    "variables": []
+  },
+  {
+    "script": "figureS6_code.m",
+    "path": "utilities/BrainNet-Viewer/BrainNet_MapCfg.m",
+    "variables": []
+  },
+  {
+    "script": "figureS6_code.m",
+    "path": "utilities/BrainNet-Viewer/BrainNet.fig",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "utilities/BrainNet-Viewer/BrainNet.m",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "utilities/BrainNet-Viewer/BrainNet_MapCfg.m",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "utilities/BrainNet-Viewer/BrainNet.fig",
+    "variables": []
+  },
+  {
+    "script": "figure3_code.m",
+    "path": "figure_data/MEG_results/BrainNet_cfg_medial_left.mat",
+    "variables": [
+      "EC"
+    ]
+  },
+  {
+    "script": "figure3_code.m",
+    "path": "figure_data/MEG_results/BrainNet_cfg_medial_right.mat",
+    "variables": [
+      "EC"
+    ]
+  },
+  {
+    "script": "figure3_code.m",
+    "path": "figure_data/MEG_results/decision_sigmaV_source_OXTRconjunction_.nii",
+    "variables": []
+  },
+  {
+    "script": "figure3_code.m",
+    "path": "figure_data/MEG_results/decision_gamma_band_source_OXTRconjunction_.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS5_code.m",
+    "path": "figure_data/MEG_results/BrainNet_cfg_medial_left.mat",
+    "variables": [
+      "EC"
+    ]
+  },
+  {
+    "script": "figureS5_code.m",
+    "path": "figure_data/MEG_results/decision_gamma_band_source_OXTRconjunction_.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS6_code.m",
+    "path": "figure_data/MEG_results/BrainNet_cfg_medial_left.mat",
+    "variables": [
+      "EC"
+    ]
+  },
+  {
+    "script": "figureS6_code.m",
+    "path": "figure_data/MEG_results/BrainNet_cfg_medial_right.mat",
+    "variables": [
+      "EC"
+    ]
+  },
+  {
+    "script": "figureS6_code.m",
+    "path": "figure_data/MEG_results/BrainNet_cfg_lateral.mat",
+    "variables": [
+      "EC"
+    ]
+  },
+  {
+    "script": "figureS6_code.m",
+    "path": "figure_data/MEG_results/decision_gamma_band_source_OXTRconjunction_.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS6_code.m",
+    "path": "figure_data/MEG_results/decision_gamma_band_source_allCluster1.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS6_code.m",
+    "path": "figure_data/MEG_results/decision_sigmaV_source_OXTRconjunction_.nii",
+    "variables": []
+  },
+  {
+    "script": "figure3_code.m",
+    "path": "utilities/BrainNet-Viewer/BrainMesh_ICBM152Left.nv",
+    "variables": []
+  },
+  {
+    "script": "figure3_code.m",
+    "path": "utilities/BrainNet-Viewer/BrainMesh_ICBM152Right.nv",
+    "variables": []
+  },
+  {
+    "script": "figureS5_code.m",
+    "path": "utilities/BrainNet-Viewer/BrainMesh_ICBM152Left.nv",
+    "variables": []
+  },
+  {
+    "script": "figureS6_code.m",
+    "path": "utilities/BrainNet-Viewer/BrainMesh_ICBM152.nv",
+    "variables": []
+  },
+  {
+    "script": "figureS6_code.m",
+    "path": "utilities/BrainNet-Viewer/BrainMesh_ICBM152Left.nv",
+    "variables": []
+  },
+  {
+    "script": "figureS6_code.m",
+    "path": "utilities/BrainNet-Viewer/BrainMesh_ICBM152Right.nv",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "utilities/BrainNet-Viewer/BrainMesh_ICBM152.nv",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "utilities/BrainNet-Viewer/BrainMesh_ICBM152Left.nv",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "utilities/BrainNet-Viewer/BrainMesh_ICBM152Right.nv",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/decision_gamma_band/topoplot/frame_01_t_m0p80_m0p60_topo.mat",
+    "variables": [
+      "ot_freq_conf",
+      "ot_freq_cong",
+      "pl_freq_conf",
+      "pl_freq_cong"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/decision_gamma_band/topoplot/frame_02_t_m0p75_m0p55_topo.mat",
+    "variables": [
+      "ot_freq_conf",
+      "ot_freq_cong",
+      "pl_freq_conf",
+      "pl_freq_cong"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/decision_gamma_band/topoplot/frame_03_t_m0p70_m0p50_topo.mat",
+    "variables": [
+      "ot_freq_conf",
+      "ot_freq_cong",
+      "pl_freq_conf",
+      "pl_freq_cong"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/decision_gamma_band/topoplot/frame_04_t_m0p65_m0p45_topo.mat",
+    "variables": [
+      "ot_freq_conf",
+      "ot_freq_cong",
+      "pl_freq_conf",
+      "pl_freq_cong"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/decision_gamma_band/topoplot/frame_05_t_m0p60_m0p40_topo.mat",
+    "variables": [
+      "ot_freq_conf",
+      "ot_freq_cong",
+      "pl_freq_conf",
+      "pl_freq_cong"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/decision_gamma_band/topoplot/frame_06_t_m0p55_m0p35_topo.mat",
+    "variables": [
+      "ot_freq_conf",
+      "ot_freq_cong",
+      "pl_freq_conf",
+      "pl_freq_cong"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/decision_gamma_band/topoplot/frame_07_t_m0p50_m0p30_topo.mat",
+    "variables": [
+      "ot_freq_conf",
+      "ot_freq_cong",
+      "pl_freq_conf",
+      "pl_freq_cong"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/decision_gamma_band/topoplot/frame_08_t_m0p45_m0p25_topo.mat",
+    "variables": [
+      "ot_freq_conf",
+      "ot_freq_cong",
+      "pl_freq_conf",
+      "pl_freq_cong"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/decision_gamma_band/topoplot/frame_09_t_m0p40_m0p20_topo.mat",
+    "variables": [
+      "ot_freq_conf",
+      "ot_freq_cong",
+      "pl_freq_conf",
+      "pl_freq_cong"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/decision_gamma_band/topoplot/frame_10_t_m0p35_m0p15_topo.mat",
+    "variables": [
+      "ot_freq_conf",
+      "ot_freq_cong",
+      "pl_freq_conf",
+      "pl_freq_cong"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/decision_gamma_band/topoplot/frame_11_t_m0p30_m0p10_topo.mat",
+    "variables": [
+      "ot_freq_conf",
+      "ot_freq_cong",
+      "pl_freq_conf",
+      "pl_freq_cong"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/decision_gamma_band/topoplot/frame_12_t_m0p25_m0p05_topo.mat",
+    "variables": [
+      "ot_freq_conf",
+      "ot_freq_cong",
+      "pl_freq_conf",
+      "pl_freq_cong"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/decision_gamma_band/topoplot/frame_13_t_m0p20_0p00_topo.mat",
+    "variables": [
+      "ot_freq_conf",
+      "ot_freq_cong",
+      "pl_freq_conf",
+      "pl_freq_cong"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/decision_gamma_band/topoplot/frame_14_t_m0p15_0p05_topo.mat",
+    "variables": [
+      "ot_freq_conf",
+      "ot_freq_cong",
+      "pl_freq_conf",
+      "pl_freq_cong"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/decision_gamma_band/topoplot/frame_15_t_m0p10_0p10_topo.mat",
+    "variables": [
+      "ot_freq_conf",
+      "ot_freq_cong",
+      "pl_freq_conf",
+      "pl_freq_cong"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/decision_gamma_band/source/frame_01_t_m0p80_m0p60_stat_cluster1.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/decision_gamma_band/source/frame_02_t_m0p75_m0p55_stat_cluster1.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/decision_gamma_band/source/frame_03_t_m0p70_m0p50_stat_cluster1.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/decision_gamma_band/source/frame_04_t_m0p65_m0p45_stat_cluster1.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/decision_gamma_band/source/frame_05_t_m0p60_m0p40_stat_cluster1.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/decision_gamma_band/source/frame_06_t_m0p55_m0p35_stat_cluster1.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/decision_gamma_band/source/frame_07_t_m0p50_m0p30_stat_cluster1.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/decision_gamma_band/source/frame_08_t_m0p45_m0p25_stat_cluster1.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/decision_gamma_band/source/frame_09_t_m0p40_m0p20_stat_cluster1.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/decision_gamma_band/source/frame_10_t_m0p35_m0p15_stat_cluster1.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/decision_gamma_band/source/frame_11_t_m0p30_m0p10_stat_cluster1.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/decision_gamma_band/source/frame_12_t_m0p25_m0p05_stat_cluster1.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/decision_gamma_band/source/frame_13_t_m0p20_p0p00_stat_cluster1.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/decision_gamma_band/source/frame_14_t_m0p15_p0p05_stat_cluster1.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/decision_gamma_band/source/frame_15_t_m0p10_p0p10_stat_cluster1.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/decision_gamma_band/source/BrainNet_cfg.mat",
+    "variables": [
+      "EC"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/decision_beta_band/topoplot/frame_01_t_m0p80_m0p60_topo.mat",
+    "variables": [
+      "ot_freq_conf",
+      "ot_freq_cong",
+      "pl_freq_conf",
+      "pl_freq_cong"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/decision_beta_band/topoplot/frame_02_t_m0p75_m0p55_topo.mat",
+    "variables": [
+      "ot_freq_conf",
+      "ot_freq_cong",
+      "pl_freq_conf",
+      "pl_freq_cong"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/decision_beta_band/topoplot/frame_03_t_m0p70_m0p50_topo.mat",
+    "variables": [
+      "ot_freq_conf",
+      "ot_freq_cong",
+      "pl_freq_conf",
+      "pl_freq_cong"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/decision_beta_band/topoplot/frame_04_t_m0p65_m0p45_topo.mat",
+    "variables": [
+      "ot_freq_conf",
+      "ot_freq_cong",
+      "pl_freq_conf",
+      "pl_freq_cong"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/decision_beta_band/topoplot/frame_05_t_m0p60_m0p40_topo.mat",
+    "variables": [
+      "ot_freq_conf",
+      "ot_freq_cong",
+      "pl_freq_conf",
+      "pl_freq_cong"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/decision_beta_band/topoplot/frame_06_t_m0p55_m0p35_topo.mat",
+    "variables": [
+      "ot_freq_conf",
+      "ot_freq_cong",
+      "pl_freq_conf",
+      "pl_freq_cong"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/decision_beta_band/topoplot/frame_07_t_m0p50_m0p30_topo.mat",
+    "variables": [
+      "ot_freq_conf",
+      "ot_freq_cong",
+      "pl_freq_conf",
+      "pl_freq_cong"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/decision_beta_band/topoplot/frame_08_t_m0p45_m0p25_topo.mat",
+    "variables": [
+      "ot_freq_conf",
+      "ot_freq_cong",
+      "pl_freq_conf",
+      "pl_freq_cong"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/decision_beta_band/topoplot/frame_09_t_m0p40_m0p20_topo.mat",
+    "variables": [
+      "ot_freq_conf",
+      "ot_freq_cong",
+      "pl_freq_conf",
+      "pl_freq_cong"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/decision_beta_band/topoplot/frame_10_t_m0p35_m0p15_topo.mat",
+    "variables": [
+      "ot_freq_conf",
+      "ot_freq_cong",
+      "pl_freq_conf",
+      "pl_freq_cong"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/decision_beta_band/topoplot/frame_11_t_m0p30_m0p10_topo.mat",
+    "variables": [
+      "ot_freq_conf",
+      "ot_freq_cong",
+      "pl_freq_conf",
+      "pl_freq_cong"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/decision_beta_band/topoplot/frame_12_t_m0p25_m0p05_topo.mat",
+    "variables": [
+      "ot_freq_conf",
+      "ot_freq_cong",
+      "pl_freq_conf",
+      "pl_freq_cong"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/decision_beta_band/topoplot/frame_13_t_m0p20_0p00_topo.mat",
+    "variables": [
+      "ot_freq_conf",
+      "ot_freq_cong",
+      "pl_freq_conf",
+      "pl_freq_cong"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/decision_beta_band/topoplot/frame_14_t_m0p15_0p05_topo.mat",
+    "variables": [
+      "ot_freq_conf",
+      "ot_freq_cong",
+      "pl_freq_conf",
+      "pl_freq_cong"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/decision_beta_band/topoplot/frame_15_t_m0p10_0p10_topo.mat",
+    "variables": [
+      "ot_freq_conf",
+      "ot_freq_cong",
+      "pl_freq_conf",
+      "pl_freq_cong"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/decision_beta_band/source/frame_01_t_m0p80_m0p60_F_clusterSig.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/decision_beta_band/source/frame_02_t_m0p75_m0p55_F_clusterSig.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/decision_beta_band/source/frame_03_t_m0p70_m0p50_F_clusterSig.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/decision_beta_band/source/frame_04_t_m0p65_m0p45_F_clusterSig.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/decision_beta_band/source/frame_05_t_m0p60_m0p40_F_clusterSig.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/decision_beta_band/source/frame_06_t_m0p55_m0p35_F_clusterSig.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/decision_beta_band/source/frame_07_t_m0p50_m0p30_F_clusterSig.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/decision_beta_band/source/frame_08_t_m0p45_m0p25_F_clusterSig.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/decision_beta_band/source/frame_09_t_m0p40_m0p20_F_clusterSig.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/decision_beta_band/source/frame_10_t_m0p35_m0p15_F_clusterSig.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/decision_beta_band/source/frame_11_t_m0p30_m0p10_F_clusterSig.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/decision_beta_band/source/frame_12_t_m0p25_m0p05_F_clusterSig.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/decision_beta_band/source/frame_13_t_m0p20_p0p00_F_clusterSig.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/decision_beta_band/source/frame_14_t_m0p15_p0p05_F_clusterSig.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/decision_beta_band/source/frame_15_t_m0p10_p0p10_F_clusterSig.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/decision_beta_band/source/BrainNet_cfg.mat",
+    "variables": [
+      "EC"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/motor_gamma_band/topoplot/frame_01_t_m0p80_m0p60_topo.mat",
+    "variables": [
+      "frequency",
+      "t_win"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/motor_gamma_band/topoplot/frame_02_t_m0p75_m0p55_topo.mat",
+    "variables": [
+      "frequency",
+      "t_win"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/motor_gamma_band/topoplot/frame_03_t_m0p70_m0p50_topo.mat",
+    "variables": [
+      "frequency",
+      "t_win"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/motor_gamma_band/topoplot/frame_04_t_m0p65_m0p45_topo.mat",
+    "variables": [
+      "frequency",
+      "t_win"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/motor_gamma_band/topoplot/frame_05_t_m0p60_m0p40_topo.mat",
+    "variables": [
+      "frequency",
+      "t_win"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/motor_gamma_band/topoplot/frame_06_t_m0p55_m0p35_topo.mat",
+    "variables": [
+      "frequency",
+      "t_win"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/motor_gamma_band/topoplot/frame_07_t_m0p50_m0p30_topo.mat",
+    "variables": [
+      "frequency",
+      "t_win"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/motor_gamma_band/topoplot/frame_08_t_m0p45_m0p25_topo.mat",
+    "variables": [
+      "frequency",
+      "t_win"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/motor_gamma_band/topoplot/frame_09_t_m0p40_m0p20_topo.mat",
+    "variables": [
+      "frequency",
+      "t_win"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/motor_gamma_band/topoplot/frame_10_t_m0p35_m0p15_topo.mat",
+    "variables": [
+      "frequency",
+      "t_win"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/motor_gamma_band/topoplot/frame_11_t_m0p30_m0p10_topo.mat",
+    "variables": [
+      "frequency",
+      "t_win"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/motor_gamma_band/topoplot/frame_12_t_m0p25_m0p05_topo.mat",
+    "variables": [
+      "frequency",
+      "t_win"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/motor_gamma_band/topoplot/frame_13_t_m0p20_0p00_topo.mat",
+    "variables": [
+      "frequency",
+      "t_win"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/motor_gamma_band/topoplot/frame_14_t_m0p15_0p05_topo.mat",
+    "variables": [
+      "frequency",
+      "t_win"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/motor_gamma_band/topoplot/frame_15_t_m0p10_0p10_topo.mat",
+    "variables": [
+      "frequency",
+      "t_win"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/motor_gamma_band/source/frame_01_t_m0p80_m0p60_F_gt2.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/motor_gamma_band/source/frame_02_t_m0p75_m0p55_F_gt2.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/motor_gamma_band/source/frame_03_t_m0p70_m0p50_F_gt2.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/motor_gamma_band/source/frame_04_t_m0p65_m0p45_F_gt2.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/motor_gamma_band/source/frame_05_t_m0p60_m0p40_F_gt2.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/motor_gamma_band/source/frame_06_t_m0p55_m0p35_F_gt2.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/motor_gamma_band/source/frame_07_t_m0p50_m0p30_F_gt2.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/motor_gamma_band/source/frame_08_t_m0p45_m0p25_F_gt2.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/motor_gamma_band/source/frame_09_t_m0p40_m0p20_F_gt2.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/motor_gamma_band/source/frame_10_t_m0p35_m0p15_F_gt2.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/motor_gamma_band/source/frame_11_t_m0p30_m0p10_F_gt2.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/motor_gamma_band/source/frame_12_t_m0p25_m0p05_F_gt2.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/motor_gamma_band/source/frame_13_t_m0p20_0p00_F_gt2.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/motor_gamma_band/source/frame_14_t_m0p15_0p05_F_gt2.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/motor_gamma_band/source/frame_15_t_m0p10_0p10_F_gt2.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/motor_gamma_band/source/BrainNet_cfg.mat",
+    "variables": [
+      "EC"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/motor_beta_band/topoplot/frame_01_t_m0p80_m0p60_topo.mat",
+    "variables": [
+      "ot_freq_right",
+      "ot_freq_left",
+      "pl_freq_right",
+      "pl_freq_left"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/motor_beta_band/topoplot/frame_02_t_m0p75_m0p55_topo.mat",
+    "variables": [
+      "ot_freq_right",
+      "ot_freq_left",
+      "pl_freq_right",
+      "pl_freq_left"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/motor_beta_band/topoplot/frame_03_t_m0p70_m0p50_topo.mat",
+    "variables": [
+      "ot_freq_right",
+      "ot_freq_left",
+      "pl_freq_right",
+      "pl_freq_left"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/motor_beta_band/topoplot/frame_04_t_m0p65_m0p45_topo.mat",
+    "variables": [
+      "ot_freq_right",
+      "ot_freq_left",
+      "pl_freq_right",
+      "pl_freq_left"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/motor_beta_band/topoplot/frame_05_t_m0p60_m0p40_topo.mat",
+    "variables": [
+      "ot_freq_right",
+      "ot_freq_left",
+      "pl_freq_right",
+      "pl_freq_left"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/motor_beta_band/topoplot/frame_06_t_m0p55_m0p35_topo.mat",
+    "variables": [
+      "ot_freq_right",
+      "ot_freq_left",
+      "pl_freq_right",
+      "pl_freq_left"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/motor_beta_band/topoplot/frame_07_t_m0p50_m0p30_topo.mat",
+    "variables": [
+      "ot_freq_right",
+      "ot_freq_left",
+      "pl_freq_right",
+      "pl_freq_left"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/motor_beta_band/topoplot/frame_08_t_m0p45_m0p25_topo.mat",
+    "variables": [
+      "ot_freq_right",
+      "ot_freq_left",
+      "pl_freq_right",
+      "pl_freq_left"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/motor_beta_band/topoplot/frame_09_t_m0p40_m0p20_topo.mat",
+    "variables": [
+      "ot_freq_right",
+      "ot_freq_left",
+      "pl_freq_right",
+      "pl_freq_left"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/motor_beta_band/topoplot/frame_10_t_m0p35_m0p15_topo.mat",
+    "variables": [
+      "ot_freq_right",
+      "ot_freq_left",
+      "pl_freq_right",
+      "pl_freq_left"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/motor_beta_band/topoplot/frame_11_t_m0p30_m0p10_topo.mat",
+    "variables": [
+      "ot_freq_right",
+      "ot_freq_left",
+      "pl_freq_right",
+      "pl_freq_left"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/motor_beta_band/topoplot/frame_12_t_m0p25_m0p05_topo.mat",
+    "variables": [
+      "ot_freq_right",
+      "ot_freq_left",
+      "pl_freq_right",
+      "pl_freq_left"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/motor_beta_band/topoplot/frame_13_t_m0p20_0p00_topo.mat",
+    "variables": [
+      "ot_freq_right",
+      "ot_freq_left",
+      "pl_freq_right",
+      "pl_freq_left"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/motor_beta_band/topoplot/frame_14_t_m0p15_0p05_topo.mat",
+    "variables": [
+      "ot_freq_right",
+      "ot_freq_left",
+      "pl_freq_right",
+      "pl_freq_left"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/motor_beta_band/topoplot/frame_15_t_m0p10_0p10_topo.mat",
+    "variables": [
+      "ot_freq_right",
+      "ot_freq_left",
+      "pl_freq_right",
+      "pl_freq_left"
+    ]
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/motor_beta_band/source/frame_01_t_m0p80_m0p60_F_clusterSig.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/motor_beta_band/source/frame_02_t_m0p75_m0p55_F_clusterSig.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/motor_beta_band/source/frame_03_t_m0p70_m0p50_F_clusterSig.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/motor_beta_band/source/frame_04_t_m0p65_m0p45_F_clusterSig.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/motor_beta_band/source/frame_05_t_m0p60_m0p40_F_clusterSig.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/motor_beta_band/source/frame_06_t_m0p55_m0p35_F_clusterSig.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/motor_beta_band/source/frame_07_t_m0p50_m0p30_F_clusterSig.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/motor_beta_band/source/frame_08_t_m0p45_m0p25_F_clusterSig.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/motor_beta_band/source/frame_09_t_m0p40_m0p20_F_clusterSig.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/motor_beta_band/source/frame_10_t_m0p35_m0p15_F_clusterSig.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/motor_beta_band/source/frame_11_t_m0p30_m0p10_F_clusterSig.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/motor_beta_band/source/frame_12_t_m0p25_m0p05_F_clusterSig.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/motor_beta_band/source/frame_13_t_m0p20_0p00_F_clusterSig.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/motor_beta_band/source/frame_14_t_m0p15_0p05_F_clusterSig.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/motor_beta_band/source/frame_15_t_m0p10_0p10_F_clusterSig.nii",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "path": "figure_data/MEG_results/source_dynamic_gif/motor_beta_band/source/BrainNet_cfg.mat",
+    "variables": [
+      "EC"
+    ]
+  }
+]

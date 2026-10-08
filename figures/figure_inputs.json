@@ -1,0 +1,394 @@
+[
+  {
+    "script": "figure1_code.m",
+    "folder": "behavioral_results",
+    "file": "all_accauc.mat",
+    "variables": [
+      "osub",
+      "psub"
+    ]
+  },
+  {
+    "script": "figure1_code.m",
+    "folder": "behavioral_results",
+    "file": "all_GLM_beta_withGroup_fixExpID.mat",
+    "variables": [
+      "beta_ot0",
+      "beta_pl0"
+    ]
+  },
+  {
+    "script": "figure1_code.m",
+    "folder": "behavioral_results",
+    "file": "sigmoid_data.mat",
+    "variables": [
+      "sig_isc",
+      "sig_isc0",
+      "sig_conf",
+      "sig_conf0"
+    ]
+  },
+  {
+    "script": "figure2_code.m",
+    "folder": "behavioral_results",
+    "file": "all_GLM_beta_withGroup_fixExpID.mat",
+    "variables": [
+      "beta_ot0",
+      "beta_pl0"
+    ]
+  },
+  {
+    "script": "figure2_code.m",
+    "folder": "model_results",
+    "file": "all_GLM_beta_pred.mat",
+    "variables": [
+      "pred_beta"
+    ]
+  },
+  {
+    "script": "figure2_code.m",
+    "folder": "model_results",
+    "file": "model_fit_parameter_85.mat",
+    "variables": [
+      "ots_minb1",
+      "pls_minb1",
+      "otn_minb1",
+      "pln_minb1"
+    ]
+  },
+  {
+    "script": "figure3_code.m",
+    "folder": "behavioral_results",
+    "file": "MEG_GLM_beta.mat",
+    "variables": [
+      "MEG_ot0",
+      "MEG_pl0"
+    ]
+  },
+  {
+    "script": "figure3_code.m",
+    "folder": "behavioral_results",
+    "file": "MEG_acc_auc.mat",
+    "variables": [
+      "osub",
+      "psub"
+    ]
+  },
+  {
+    "script": "figure3_code.m",
+    "folder": "model_results",
+    "file": "model_fit_parameter_MEG19.mat",
+    "variables": []
+  },
+  {
+    "script": "figure3_code.m",
+    "folder": "MEG_results",
+    "file": "pressPutton_task_and_ITI_glm_beta_OT_PL.mat",
+    "variables": []
+  },
+  {
+    "script": "figure3_code.m",
+    "folder": "model_results",
+    "file": "model_DDM_trajectory_GLM.mat",
+    "variables": [
+      "beta_acc",
+      "beta_acc1",
+      "bs_acc",
+      "bc_acc",
+      "bs_acc1",
+      "bc_acc1"
+    ]
+  },
+  {
+    "script": "figure3_code.m",
+    "folder": "MEG_results",
+    "file": "trajectory_sourceEFR_GLM_beta_sumq.mat",
+    "variables": [
+      "sb_chosen0",
+      "sb_chosen",
+      "cb_chosen0",
+      "cb_chosen"
+    ]
+  },
+  {
+    "script": "figure3_code.m",
+    "folder": "MEG_results",
+    "file": "40_level_data.mat",
+    "variables": []
+  },
+  {
+    "script": "figure3_code.m",
+    "folder": "MEG_results",
+    "file": "pair_data.mat",
+    "variables": [
+      "order_idx1",
+      "order_idx2"
+    ]
+  },
+  {
+    "script": "figure3_code.m",
+    "folder": "MEG_results",
+    "file": "high_powspectrm_congruentpressPutton_allCondition(250hz)102.mat",
+    "variables": []
+  },
+  {
+    "script": "figure3_code.m",
+    "folder": "MEG_results",
+    "file": "high_powspectrm_conflictpressPutton_allCondition(250hz)102.mat",
+    "variables": []
+  },
+  {
+    "script": "figure3_code.m",
+    "folder": "MEG_results",
+    "file": "fre_60_80Hz_topoplot.mat",
+    "variables": []
+  },
+  {
+    "script": "figure3_code.m",
+    "folder": "MEG_results",
+    "file": "decision_gamma_band_sourceTFR.mat",
+    "variables": []
+  },
+  {
+    "script": "figure4_code.m",
+    "folder": "MRS_results",
+    "file": "Neurotransmitter_data.mat",
+    "variables": [
+      "gaba",
+      "glx"
+    ]
+  },
+  {
+    "script": "figure4_code.m",
+    "folder": "behavioral_results",
+    "file": "MRS_GLM_beta.mat",
+    "variables": [
+      "MRS_ot0",
+      "MRS_pl0"
+    ]
+  },
+  {
+    "script": "figure4_code.m",
+    "folder": "model_results",
+    "file": "model_fit_parameter_MRS29.mat",
+    "variables": [
+      "ots_minb1",
+      "pls_minb1",
+      "otn_minb1",
+      "pln_minb1"
+    ]
+  },
+  {
+    "script": "figureS1_code.m",
+    "folder": "behavioral_results",
+    "file": "all_accauc.mat",
+    "variables": [
+      "osub",
+      "psub"
+    ]
+  },
+  {
+    "script": "figureS1_code.m",
+    "folder": "behavioral_results",
+    "file": "singleExp_GLM_beta.mat",
+    "variables": [
+      "sbeta_ot0",
+      "sbeta_pl0"
+    ]
+  },
+  {
+    "script": "figureS2_code.m",
+    "folder": "behavioral_results",
+    "file": "all_accauc.mat",
+    "variables": [
+      "osub",
+      "psub"
+    ]
+  },
+  {
+    "script": "figureS2_code.m",
+    "folder": "behavioral_results",
+    "file": "all_GLM_beta_withGroup_fixExpID.mat",
+    "variables": [
+      "beta_ot0",
+      "beta_pl0"
+    ]
+  },
+  {
+    "script": "figureS2_code.m",
+    "folder": "behavioral_results",
+    "file": "coherence_data.mat",
+    "variables": [
+      "coh_data"
+    ]
+  },
+  {
+    "script": "figureS3_code.m",
+    "folder": "behavioral_results",
+    "file": "all_GLM_beta_withGroup_fixExpID.mat",
+    "variables": [
+      "beta_ot0",
+      "beta_pl0"
+    ]
+  },
+  {
+    "script": "figureS3_code.m",
+    "folder": "model_results",
+    "file": "all_GLM_beta_pred.mat",
+    "variables": [
+      "pred_beta"
+    ]
+  },
+  {
+    "script": "figureS3_code.m",
+    "folder": "model_results",
+    "file": "model_compare_data.mat",
+    "variables": [
+      "mc_bic",
+      "mc_aic",
+      "mc_nll",
+      "bmc"
+    ]
+  },
+  {
+    "script": "figureS3_code.m",
+    "folder": "model_results",
+    "file": "model_parameterRecovery_85.mat",
+    "variables": [
+      "ots_minb2",
+      "pls_minb2",
+      "otn_minb2",
+      "pln_minb2"
+    ]
+  },
+  {
+    "script": "figureS3_code.m",
+    "folder": "model_results",
+    "file": "model_fit_parameter_85.mat",
+    "variables": [
+      "ots_minb1",
+      "pls_minb1",
+      "otn_minb1",
+      "pln_minb1"
+    ]
+  },
+  {
+    "script": "figureS4_code.m",
+    "folder": "model_results",
+    "file": "twolambda_model_fit_parameter_85.mat",
+    "variables": [
+      "ots_minb1",
+      "pls_minb1",
+      "otn_minb1",
+      "pln_minb1"
+    ]
+  },
+  {
+    "script": "figureS5_code.m",
+    "folder": "MEG_results",
+    "file": "trajectory_sourceEFR_GLM_beta_ROIgamma.mat",
+    "variables": [
+      "sb_chosen0",
+      "sb_chosen",
+      "cb_chosen0",
+      "cb_chosen"
+    ]
+  },
+  {
+    "script": "figureS5_code.m",
+    "folder": "MRS_results",
+    "file": "MEG_OXTR_fMRS_overlap.mat",
+    "variables": [
+      "idx_fmrs",
+      "idx_oxtr",
+      "idx_meg_tfr",
+      "idx_meg_efr"
+    ]
+  },
+  {
+    "script": "figureS6_code.m",
+    "folder": "MEG_results",
+    "file": "40_level_data.mat",
+    "variables": []
+  },
+  {
+    "script": "figureS6_code.m",
+    "folder": "MEG_results",
+    "file": "pair_data_low.mat",
+    "variables": [
+      "order_idx1",
+      "order_idx2"
+    ]
+  },
+  {
+    "script": "figureS6_code.m",
+    "folder": "MEG_results",
+    "file": "decision_gamma_band_sourceTFR.mat",
+    "variables": []
+  },
+  {
+    "script": "figureS6_code.m",
+    "folder": "MEG_results",
+    "file": "decision_gamma_band_ALLsourceTFR.mat",
+    "variables": []
+  },
+  {
+    "script": "figureS6_code.m",
+    "folder": "MEG_results",
+    "file": "decision_ROIsigmaV_sourceTFR.mat",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "folder": "MEG_results",
+    "file": "decision_gamma_band_sourceTFR.mat",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "folder": "MEG_results",
+    "file": "motor_gamma_band_sourceTFR.mat",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "folder": "MEG_results",
+    "file": "motor_beta_band_sourceTFR.mat",
+    "variables": []
+  },
+  {
+    "script": "figureS7_code.m",
+    "folder": "MEG_results",
+    "file": "motor_gamma_band_sourceTFR.mat",
+    "variables": []
+  },
+  {
+    "script": "figureS8_code.m",
+    "folder": "MRS_results",
+    "file": "Neurotransmitter_data.mat",
+    "variables": [
+      "gaba",
+      "glx"
+    ]
+  },
+  {
+    "script": "figureS8_code.m",
+    "folder": "behavioral_results",
+    "file": "MRS_GLM_beta.mat",
+    "variables": [
+      "MRS_ot0",
+      "MRS_pl0"
+    ]
+  },
+  {
+    "script": "figureS8_code.m",
+    "folder": "model_results",
+    "file": "model_fit_parameter_MRS29.mat",
+    "variables": [
+      "ots_minb1",
+      "pls_minb1",
+      "otn_minb1",
+      "pln_minb1"
+    ]
+  }
+]
