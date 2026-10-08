@@ -18,7 +18,7 @@ function results = main_model_compare_one(otn_data, modelType)
     
     % Use parfor for participant-level parallel processing
     for subjID = 1:numSubjects
-        fprintf('开始处理被试 %d/%d...\n', subjID, numSubjects);
+        fprintf('Processing participant %d/%d...\n', subjID, numSubjects);
         subtic = tic;       
         subjectData = otn_data(subjID);
         fields = {'answer1','answer2','conf1','conf2','conflict','rtime2'};
@@ -86,11 +86,11 @@ function results = main_model_compare_one(otn_data, modelType)
         results(subjID) = resTemp;
         
         subjTime = toc(subtic);
-        fprintf('被试 %d 指定模型处理完成，耗时 %.3f 秒\n', subjID, subjTime);        
+        fprintf('Selected model completed for participant %d in %.3f s\n', subjID, subjTime);        
     end
     
     totalTime = toc(totaltic); 
-    fprintf('\n所有被试处理完毕! 总耗时: %.3f 秒\n', totalTime);
+    fprintf('\nAll participants completed. Total time: %.3f s\n', totalTime);
 end
 
 %% Main optimization function (Based on modelType dynamically adjust the parameter space)

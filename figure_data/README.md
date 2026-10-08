@@ -24,3 +24,19 @@ Some supplied files support upstream or extended analyses. Panel-specific contra
 ## SigmaV/OXTR ROI time-frequency data
 
 decision_ROIsigmaV_sourceTFR.mat contains time-frequency results reconstructed from source grids in the SigmaV source cluster intersected with the OXTR ROI. Reconstruction uses the gamma-band source-reconstruction procedure and gamma-derived spatial filters, with the ROI grids replaced by the SigmaV/OXTR conjunction. The SigmaV source-localization filters are not used for this reconstruction.
+
+## Behavioral model inputs
+
+behavioral_results/bhv_data_85.mat contains four-condition trial data for all 85 retained participants. bhv_data_MEG_19.mat contains the corresponding MEG participants in the same order as rows 38:56 of the complete dataset. These files support behavioral GLMs and computational-model fitting.
+
+model_results/model_fit_parameter_85_NOLambda.mat and model_fit_parameter_MEG19_NOLambda.mat contain independently refitted no-inhibition model parameters. Their four minb2 arrays contain optParams_FullArray with nine slots and lambda=0 in slot 7. Full-model parameters use the corresponding model_fit_parameter_85.mat and model_fit_parameter_MEG19.mat files and optParams fields. New analyses write to analysis_outputs, preserving the supplied figure inputs.
+
+## Sliding-window scalp input format
+
+Both motor_gamma_band/topoplot and motor_beta_band/topoplot use four top-level cell arrays: ot_freq_right, ot_freq_left, pl_freq_right, and pl_freq_left. Each cell contains one participant's FieldTrip channel-power structure. Motor-gamma files also contain subject_ids (participant order) and t_win (window boundaries). These are the only six top-level variables in motor-gamma scalp files; CSDs, fitting/export configurations, and trial-Fourier flags are not required for GIF reproduction. Decision inputs retain ot_freq_conf, ot_freq_cong, pl_freq_conf, and pl_freq_cong.
+
+The topoplot_sliding_window_gif function uses one shared reading branch for both motor bands. Filenames determine chronological order, and t_win is checked where supplied. Power values, channel order, participant order, and the participant-wise t-statistic calculation are preserved.
+
+## Participant IDs and cohort rows
+
+participant_index.csv defines the public participant IDs and the corresponding rows in the complete and cohort-specific datasets. IDs follow the 85-row retained-sample order: sub-001 to sub-037 for the behavioral cohort, sub-038 to sub-056 for MEG, and sub-057 to sub-085 for fMRS. Single-cohort files retain these global IDs. The four behavioral conditions contain one own-participant subsName entry per record; partner names, expOrder, and pair_num are omitted. bhv_data_bhv_37.mat and bhv_data_MRS_29.mat provide the additional cohort subsets. Numerical parameter, coefficient, and concentration arrays retain their supplied participant order.

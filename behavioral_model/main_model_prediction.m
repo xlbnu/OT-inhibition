@@ -1,5 +1,16 @@
 %% Parameter settings
 codeRoot = fileparts(fileparts(mfilename('fullpath')));
+load(fullfile(codeRoot,'figure_data','behavioral_results','bhv_data_85.mat'), ...
+    'ots_data','pls_data','otn_data','pln_data');
+% Set predictionParameterFile before running to use a newly aggregated fit.
+if ~exist('predictionParameterFile','var') || isempty(predictionParameterFile)
+    predictionParameterFile = fullfile(codeRoot,'figure_data','model_results','model_fit_parameter_85.mat');
+end
+assert(isfile(predictionParameterFile),'Missing fitted parameters: %s',predictionParameterFile);
+load(predictionParameterFile,'ots_minb1','pls_minb1','otn_minb1','pln_minb1');
+assert(all([numel(ots_data),numel(pls_data),numel(otn_data),numel(pln_data), ...
+    numel(ots_minb1),numel(pls_minb1),numel(otn_minb1),numel(pln_minb1)] == 85), ...
+    'Expected 85 aligned participants in every behavioral and parameter array.');
 n_run = 500;                       % Number of prediction repetitions
 lapse_rate = 0.05;                  % Probability of random choice and confidence
 cohortID = [ones(37, 1); 2 * ones(19, 1); 3 * ones(29, 1)]; % 85 participants' cohort
@@ -8,12 +19,13 @@ if ~exist(output_dir, 'dir')
     mkdir(output_dir);
 end
 
-%% Single model prediction: Preserve the original code's use of ot_valid to select behavioral data
-ots_preds = generate_model_predictions(ots_minb1, ots_data(ot_valid));
-pls_preds = generate_model_predictions(pls_minb1, pls_data(ot_valid));
-otn_preds = generate_model_predictions(otn_minb1, otn_data(ot_valid));
-pln_preds = generate_model_predictions(pln_minb1, pln_data(ot_valid));
-save(fullfile(output_dir, 'prediction_data_85.mat')); % Save the current workspace as in the original code
+%% Single prediction for all 85 retained participants
+ots_preds = generate_model_predictions(ots_minb1, ots_data);
+pls_preds = generate_model_predictions(pls_minb1, pls_data);
+otn_preds = generate_model_predictions(otn_minb1, otn_data);
+pln_preds = generate_model_predictions(pln_minb1, pln_data);
+save(fullfile(output_dir, 'prediction_data_85.mat'), ...
+    'ots_preds','pls_preds','otn_preds','pln_preds');
 
 %% Repeated prediction and mixed-effects models: Preserve the original code's use of complete behavioral data
 beta_runs = cell(n_run, 1);
@@ -52,7 +64,7 @@ for f = 1:numel(names)
     end
     pred_beta.(field) = averaged;
 end
-save(fullfile(output_dir, 'all_GLM_beta_pred_2k.mat'), 'pred_beta', 'cohortID');
+save(fullfile(output_dir, 'all_GLM_beta_pred.mat'), 'pred_beta', 'cohortID');
 
 %% Generate conflict-trial predictions for each participant from fitted parameters
 function predictions = generate_model_predictions(results, exp_data)

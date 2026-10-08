@@ -6,6 +6,8 @@ gamma.ipynb contains network parameters, trial simulations, Welch spectra, specp
 
 Use Python 3.9.18 and execute gamma.ipynb cell by cell in Jupyter Notebook 6.4.8.
 
+Install the pinned packages with `python -m pip install -r requirements.txt` from the package root. Start Jupyter with mean-field as the working directory, so the notebook's relative 40_level_data.mat save/load calls use the same location. The supplied MATLAB figure inputs remain in figure_data and are not overwritten by these notebook calls.
+
 | Software or package | Version | Purpose |
 |---|---|---|
 | Python | 3.9.18 | Runtime environment |

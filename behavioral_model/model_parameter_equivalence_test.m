@@ -1,8 +1,16 @@
+codeRoot = fileparts(fileparts(mfilename('fullpath')));
+addpath(fullfile(codeRoot,'utilities'));
 %% Direct 4 items condition comparison
 % Standardized equivalence bound for comparisons among conditions within each parameter.
 sd_multiplier = 0.6;
 
 %% full model
+parameters = load(fullfile(codeRoot,'figure_data','model_results','model_fit_parameter_85.mat'));
+ots_xx1 = cat(1,parameters.ots_minb1.optParams);
+pls_xx1 = cat(1,parameters.pls_minb1.optParams);
+otn_xx1 = cat(1,parameters.otn_minb1.optParams);
+pln_xx1 = cat(1,parameters.pln_minb1.optParams);
+
 [pair_table, summary_table] = equivalence_four_conditions_sd( ...
     ots_xx1, pls_xx1, otn_xx1, pln_xx1, ...
     'SDMultiplier', sd_multiplier, ...
@@ -10,6 +18,12 @@ sd_multiplier = 0.6;
     'Alpha', 0.05);
 
 %% two lambda model
+parameters = load(fullfile(codeRoot,'figure_data','model_results','twolambda_model_fit_parameter_85.mat'));
+ots_xx1 = cat(1,parameters.ots_minb1.optParams);
+pls_xx1 = cat(1,parameters.pls_minb1.optParams);
+otn_xx1 = cat(1,parameters.otn_minb1.optParams);
+pln_xx1 = cat(1,parameters.pln_minb1.optParams);
+
 [pair_table, summary_table] = equivalence_four_conditions_sd( ...
     ots_xx1, pls_xx1, otn_xx1, pln_xx1, ...
     'SDMultiplier', sd_multiplier, ...
@@ -28,6 +42,17 @@ model_n_parameters = 10;  % Use 9 for the symmetric model or 10 for two-directio
 required_conditions = 4;
 sd_multiplier = 0.75;   % Standardized bound for comparisons between different parameters.
 alpha = 0.05;
+
+if model_n_parameters == 9
+    parameterFilename = 'model_fit_parameter_85.mat';
+else
+    parameterFilename = 'twolambda_model_fit_parameter_85.mat';
+end
+parameters = load(fullfile(codeRoot,'figure_data','model_results',parameterFilename));
+ots_xx1 = cat(1,parameters.ots_minb1.optParams);
+pls_xx1 = cat(1,parameters.pls_minb1.optParams);
+otn_xx1 = cat(1,parameters.otn_minb1.optParams);
+pln_xx1 = cat(1,parameters.pln_minb1.optParams);
 
 switch model_n_parameters
     case 9

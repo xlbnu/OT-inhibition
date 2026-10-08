@@ -16,6 +16,8 @@ function result = topoplot_sliding_window_gif(analysisName, cfg)
 %   PNGs in frames_dir. Set write_gif=false for frame export without a GIF.
 %   Frames are sorted by window start time parsed
 %   from their filenames, and checked against stored window metadata.
+%   Motor inputs use top-level ot_freq_right/ot_freq_left/pl_freq_right/pl_freq_left.
+%   Optional t_win metadata is checked against the filename window.
 %   Maps reproduce the supplied script: averaged OT/PL log contrasts,
 %   followed by a participant-level one-sample t-test. Uncorrected P<0.05
 %   controls opacity only; this is not a cluster-permutation result.
@@ -109,14 +111,14 @@ frameFiles = cell(numel(files),1);
 layout = [];
 for k = 1:numel(files)
     path = fullfile(files(k).folder,files(k).name);
-    if strcmp(analysisName,'motor_gamma_band')
-        s = load(path,'frequency','t_win');
-        assert(max(abs(s.t_win(:)'-windows(k,:)))<1e-6,'Stored time window mismatch.');
-        assert(max(abs(s.frequency.window(:)'-windows(k,:)))<1e-6, ...
-            'Stored frequency window mismatch.');
-        groups = {s.frequency.ot_right,s.frequency.ot_left, ...
-            s.frequency.pl_right,s.frequency.pl_left};
-    elseif startsWith(analysisName,'decision')
+    variables = whos('-file',path);
+    if any(strcmp({variables.name},'t_win'))
+        metadata = load(path,'t_win');
+        assert(numel(metadata.t_win)==2 && ...
+            max(abs(metadata.t_win(:)'-windows(k,:)))<1e-6, ...
+            'Stored time window mismatch.');
+    end
+    if startsWith(analysisName,'decision')
         s = load(path,'ot_freq_conf','ot_freq_cong','pl_freq_conf','pl_freq_cong');
         groups = {s.ot_freq_conf,s.ot_freq_cong,s.pl_freq_conf,s.pl_freq_cong};
     else

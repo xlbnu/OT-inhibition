@@ -69,3 +69,5 @@ errorbound.m (FSLboost; Apache 2.0 license in utilities) and figureTmp1_nonGroup
 ## S6P-T ROI and reconstruction
 
 decision_ROIsigmaV_sourceTFR.mat contains time-frequency results reconstructed from source grids in the SigmaV source cluster intersected with the OXTR ROI. Reconstruction uses the gamma-band source-reconstruction procedure and gamma-derived spatial filters, with the ROI grids replaced by the SigmaV/OXTR conjunction. The SigmaV source-localization filters are not used for this reconstruction. The S6P-T sections load this file from figure_data/MEG_results.
+
+Fig.S7 separates scalp GIF generation and source GIF generation into distinct sections. Its scalp section explicitly sets package-relative input paths and figure_outputs/figureS7 output files, and verifies 15 frames per animation. Both motor bands use the same four top-level power variables; see figure_data/README.md for the input schema.

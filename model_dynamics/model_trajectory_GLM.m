@@ -6,9 +6,22 @@
 % the corresponding observed-choice filter.
 
 %%
-load('D:\software\zotero_storage\outputs\trial_accumulator_GLM_2k_20260928_204258\MEG_trial_accumulator_GLM_data_2k.mat');
-load('D:\software\zotero_storage\outputs\no_lambda_trial_accumulator_2k_hierarchical85_20260928_205849\no_lambda_trial_accumulator_GLM_data_2k.mat');
-load('E:\xianliang\matlab_m\social_decision_m\data\OT_all\BHV_MEG_MRS_data_all\model_dynamic\bhv_data_MEG_19.mat');
+codeRoot = fileparts(fileparts(mfilename('fullpath')));
+outputRoot = fullfile(codeRoot,'analysis_outputs','model_dynamics');
+% Set either input filename before running to select a specific exported run.
+if ~exist('fullTrajectoryFile','var') || isempty(fullTrajectoryFile)
+    fullTrajectoryFile = latest_export_local(outputRoot, ...
+        'trial_accumulator_GLM_*','MEG_trial_accumulator_GLM_data.mat');
+end
+if ~exist('noLambdaTrajectoryFile','var') || isempty(noLambdaTrajectoryFile)
+    noLambdaTrajectoryFile = latest_export_local(outputRoot, ...
+        'no_lambda_trial_accumulator_hierarchical85_*','no_lambda_trial_accumulator_GLM_data.mat');
+end
+load(fullTrajectoryFile,'trialAccumulator');
+load(noLambdaTrajectoryFile,'trialAccumulatorNoLambda');
+load(fullfile(codeRoot,'figure_data','behavioral_results','bhv_data_MEG_19.mat'), ...
+    'ots_data','pls_data','otn_data','pln_data');
+if ~isfolder(outputRoot), mkdir(outputRoot); end
 
 %%
 data_tmp1=trialAccumulatorNoLambda.subject;
@@ -132,5 +145,13 @@ end
 
 
 %%
-save('E:\xianliang\matlab_m\social_decision_m\data\OT_all\MEG\figure_data\model_DDM_trajectory_GLM.mat','beta_acc','beta_acc1','bs_acc','bc_acc','bs_acc1','bc_acc1');
+save(fullfile(outputRoot,'model_DDM_trajectory_GLM.mat'),'beta_acc','beta_acc1','bs_acc','bc_acc','bs_acc1','bc_acc1');
 
+
+function filename = latest_export_local(outputRoot,pattern,name)
+    candidates = dir(fullfile(outputRoot,pattern,name));
+    assert(~isempty(candidates), ...
+        'Missing %s. Run the corresponding trial-accumulator export first.',name);
+    [~,index] = max([candidates.datenum]);
+    filename = fullfile(candidates(index).folder,candidates(index).name);
+end

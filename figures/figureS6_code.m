@@ -325,7 +325,7 @@ cutBackColor(gca,gcf);print(gcf,[f_file,'gamma_tfr_interaction(13-30hz)'], '-dsv
 
 %% figure S6P-T
 % load data 
-load(fullfile(dataRoot,'MEG_results','decision_ROIsigmaV_sourceTFR.mat'));
+% load(fullfile(dataRoot,'MEG_results','decision_ROIsigmaV_sourceTFR.mat'));
 [high_all_tfr_diff,high_os_tfr_diff, ...
  high_ps_tfr_diff,high_on_tfr_diff,high_pn_tfr_diff] = ...
     getConstractPower(all_tfr_conf,all_tfr_cong,os_tfr_conf,os_tfr_cong, ...
@@ -372,7 +372,7 @@ int_so=os_tfr_diff1;
 int_so.powspctrm = os_tfr_diff1.powspctrm - ps_tfr_diff1.powspctrm - on_tfr_diff1.powspctrm + pn_tfr_diff1.powspctrm;
 cfg=[];
 cfg.frequency_window=[60 100];
-cfg.latency_window=[-0.5 -0.3];
+cfg.latency_window=[-0.5 -0.32];
 cfg.clim=[-3 3];
 TFR_figure(int_so,cfg);
 print(gcf,[f_file,'sigmaV_oxtr_source_int_time-frequency_Tvalue(2-120hz)_allSigcluster'], '-dsvg','-vector','-r600');

@@ -1,0 +1,15 @@
+# Generated analysis and figure products
+/analysis_outputs/
+/figure_outputs/
+
+# MATLAB and Python temporary files
+*.asv
+*.m~
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Operating-system metadata
+.DS_Store
+Thumbs.db
+desktop.ini

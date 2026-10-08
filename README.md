@@ -1,6 +1,6 @@
 # Oxytocin social decision analysis code
 
-This directory contains code for behavioral analyses, computational models, MEG, fMRS, and article figures. Most files are research scripts that depend on workspace variables and are run manually by section. Each module README describes its inputs, execution order, and outputs. Prepared figure inputs and analysis outputs are supplied in figure_data; raw acquisition data are not included. Statistical tables are provided in the appendix following the article Methods.
+This directory contains code for behavioral analyses, computational models, MEG, fMRS, and article figures. Most files are research scripts that depend on workspace variables and are run manually by section. Each module README describes its inputs, execution order, and outputs. Prepared figure inputs and retained-participant behavioral trial data are supplied in figure_data; raw MEG and MRS acquisition data are not included. Statistical tables are provided in the appendix following the article Methods.
 
 ## Quick start: reproduce figures
 
@@ -28,14 +28,14 @@ Replace the example paths with local installation roots. Complete Fig.3/S6/S7 sc
 | behavior | Behavioral data preparation and analysis | [README](behavior/README.md) |
 | behavioral_model | Fitting, result aggregation, prediction, recovery, and equivalence testing | [README](behavioral_model/README.md) |
 | behavioral_model/hpc | SLURM entry points | [README](behavioral_model/hpc/README.md) |
-| model_dynamics | EB parameter modeling and model trajectories for MEG | [README](model_dynamics/README_2k.md) |
+| model_dynamics | Empirical-Bayes parameter modeling and model trajectories for the MEG cohort | [README](model_dynamics/README.md) |
 | mean-field | Mean-field network and spectral simulations | [README](mean-field/README.md) |
 | MEG | Preprocessing, localization, reconstruction, statistics, and control analyses | [README](MEG/README.md) |
 | fMRS | Spectral processing and concentration aggregation | [README](fMRS/README.md) |
 | figures | Plotting Fig.1–4 and Fig.S1–S8 | [README](figures/README.md) |
 | utilities | Shared statistical and plotting functions | [README](utilities/README.md) |
 
-For upstream analyses, prepare behavioral data, then fit, aggregate, and validate the behavioral models. Model trajectories, mean-field simulations, MEG, and fMRS are separate analysis modules. Figure reproduction uses the supplied prepared results directly.
+For behavioral analyses, use the supplied 85-participant trial data, then fit, aggregate, and validate the behavioral models. The 19-participant MEG behavioral file is supplied separately. Behavioral and model drivers locate these files relative to their saved location and write new results under analysis_outputs; keep the package directories together. Model trajectories, mean-field simulations, MEG, and fMRS are separate analysis modules. Figure reproduction uses the supplied prepared results directly.
 
 ## Software dependencies
 
@@ -62,6 +62,8 @@ For upstream analyses, prepare behavioral data, then fit, aggregate, and validat
 | joblib | 1.2.0 |
 | Jupyter Notebook | 6.4.8; running gamma.ipynb |
 
+For the Python environment, install the pinned packages from the package root with `python -m pip install -r requirements.txt`. See [mean-field instructions](mean-field/README.md) for notebook execution.
+
 ## Preparation for manual execution
 
 Start in the code directory and add the analysis modules and shared functions to the path. Add the FieldTrip root directory and call ft_defaults.
@@ -78,11 +80,11 @@ addpath(fullfile(codeRoot,'fMRS'));
 % Add VBA for model comparison and SPM12 for structural processing as needed.
 ```
 
-For upstream analysis scripts, set load/save paths and output directories to match the actual data locations. Figure scripts use the bundled relative paths described above. Behavioral_analysis.m, main_model_prediction.m, and neurotransmitter_stat.m write recomputed outputs to analysis_outputs, preserving the prepared figure inputs. Other upstream scripts require external raw/intermediate inputs; SCRIPT_INDEX.md lists their purposes and configuration requirements. Run data-loading and parameter-setting sections before analysis sections. For scripts containing clear or clearvars, load variables according to their workspace preservation rules.
+For upstream analysis scripts, set load/save paths and output directories to match the actual data locations. Figure scripts use the bundled relative paths described above. Behavioral_analysis.m, main_model_prediction.m, and neurotransmitter_stat.m write recomputed outputs to analysis_outputs, preserving the prepared figure inputs. Other MEG/MRS upstream scripts require external raw/intermediate inputs; SCRIPT_INDEX.md lists their purposes and configuration requirements. Run data-loading and parameter-setting sections before analysis sections. For scripts containing clear or clearvars, load variables according to their workspace preservation rules.
 
 ## Samples and conditions
 
-Participants were excluded manually based on experimental behavior and data completeness, including sleepiness, early withdrawal, and disordered data; criteria and exclusions are described in Methods. The analysis sample includes 37 behavioral, 19 MEG, and 29 fMRS participants, totaling 85. Use consistent participant IDs and ordering across the four conditions.
+Participants were excluded manually based on experimental behavior and data completeness, including sleepiness, early withdrawal, and disordered data; criteria and exclusions are described in Methods. The analysis sample includes 37 behavioral, 19 MEG, and 29 fMRS participants, totaling 85. Public IDs and cohort row indices are listed in figure_data/participant_index.csv. Cohort subsets retain the IDs from the complete sample. Use consistent participant IDs and ordering across the four conditions.
 
 The condition order is `ots_data, pls_data, otn_data, pln_data`, corresponding to OT-social, PL-social, OT-asocial, and PL-asocial. See each module's instructions for the column order of model parameters and GLMM coefficients.
 
@@ -90,4 +92,4 @@ The condition order is `ots_data, pls_data, otn_data, pln_data`, corresponding t
 
 Raw MEG and MRS recordings, structural MRI, and upstream intermediate analysis files are not included. Figure reproduction uses the supplied figure_data and does not require these external inputs.
 
-To rerun upstream analyses with separately obtained data, set each script's input and output paths to the local data locations. Preserve the subject/session/run folder hierarchy and use a writable output directory. Recomputed behavioral, prediction, and concentration summaries are saved separately under analysis_outputs. Configure toolbox roots for the current MATLAB session.
+For MEG/MRS analyses using separately obtained acquisition data, set each relevant script's input and output paths to the local data locations. Behavioral model analyses use the supplied trial data and package-relative paths. Preserve the subject/session/run folder hierarchy and use a writable output directory. Recomputed behavioral, prediction, and concentration summaries are saved separately under analysis_outputs. Configure toolbox roots for the current MATLAB session.

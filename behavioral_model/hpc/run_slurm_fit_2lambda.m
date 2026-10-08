@@ -4,11 +4,10 @@ root = fileparts(mfilename('fullpath'));
 modelRoot = fileparts(root);
 addpath(modelRoot);
 cd(root);
-inputFile = fullfile(root,'bhv_data_85.mat');
-if ~isfile(inputFile)
-    inputFile = fullfile(fileparts(modelRoot),'figure_data','behavioral_results','bhv_data_85.mat');
-end
-assert(isfile(inputFile),'Provide the required input MAT in hpc or figure_data.');
+codeRoot = fileparts(modelRoot);
+inputFile = fullfile(codeRoot,'figure_data','behavioral_results','bhv_data_85.mat');
+assert(isfile(inputFile),'Missing model input: %s',inputFile);
+
 names = {'ots_data','pls_data','otn_data','pln_data'};
 taskID = str2double(getenv('SLURM_ARRAY_TASK_ID'));
 nRepeats = str2double(getenv('FIT_NREPEAT'));
@@ -30,7 +29,7 @@ S = load(inputFile,names{ci});
 data = S.(names{ci});
 assert(isstruct(data) && isvector(data), 'Data must be a struct vector.');
 n = min(limit,numel(data));
-out = fullfile(root,'outputs',tag,names{ci},sprintf('repeat_%03d',repeatIndex));
+out = fullfile(codeRoot,'analysis_outputs','model_fitting','two_lambda',tag,names{ci},sprintf('repeat_%03d',repeatIndex));
 if ~exist(out,'dir'), mkdir(out); end
 % Exact content hashes prevent resuming after input/code changes.
 signature = [sha256(inputFile) ':' sha256(fullfile(modelRoot,'main_model_2lambda.m')) ':' ...

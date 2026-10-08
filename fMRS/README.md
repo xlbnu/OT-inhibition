@@ -31,3 +31,5 @@ Prepared Fig.4/S8 reproduction reads the supplied concentration structures and d
 run_KH06 reads a behavioral file containing sub_data, TWIX data, a water reference, and T1 images. It constructs phase1/phase2 frame ranges using valid and conflict flags, then calls GannetLoad_MultiSite, GannetFit, GannetCoRegister, GannetSegment, and GannetQuantify. TR=1.6 s, with four frames per trial by default. Configure GANNET and SPM12 in the spectral processing environment.
 
 See [the complete file index](../SCRIPT_INDEX.md) for script purposes and input requirements.
+
+The public behavioral MAT files omit expOrder and pair_num and are not substitutes for the private OT_MRS_data.mat required by run-level concentration aggregation. That upstream input must retain mrs_num and the session/run assignment information used by neurotransmitter_stat.m. Replotting Fig.4/S8 uses the supplied aggregated concentrations and does not require these private mapping fields.

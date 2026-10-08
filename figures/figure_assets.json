@@ -644,7 +644,11 @@
     "script": "figureS7_code.m",
     "path": "figure_data/MEG_results/source_dynamic_gif/motor_gamma_band/topoplot/frame_01_t_m0p80_m0p60_topo.mat",
     "variables": [
-      "frequency",
+      "ot_freq_right",
+      "ot_freq_left",
+      "pl_freq_right",
+      "pl_freq_left",
+      "subject_ids",
       "t_win"
     ]
   },
@@ -652,7 +656,11 @@
     "script": "figureS7_code.m",
     "path": "figure_data/MEG_results/source_dynamic_gif/motor_gamma_band/topoplot/frame_02_t_m0p75_m0p55_topo.mat",
     "variables": [
-      "frequency",
+      "ot_freq_right",
+      "ot_freq_left",
+      "pl_freq_right",
+      "pl_freq_left",
+      "subject_ids",
       "t_win"
     ]
   },
@@ -660,7 +668,11 @@
     "script": "figureS7_code.m",
     "path": "figure_data/MEG_results/source_dynamic_gif/motor_gamma_band/topoplot/frame_03_t_m0p70_m0p50_topo.mat",
     "variables": [
-      "frequency",
+      "ot_freq_right",
+      "ot_freq_left",
+      "pl_freq_right",
+      "pl_freq_left",
+      "subject_ids",
       "t_win"
     ]
   },
@@ -668,7 +680,11 @@
     "script": "figureS7_code.m",
     "path": "figure_data/MEG_results/source_dynamic_gif/motor_gamma_band/topoplot/frame_04_t_m0p65_m0p45_topo.mat",
     "variables": [
-      "frequency",
+      "ot_freq_right",
+      "ot_freq_left",
+      "pl_freq_right",
+      "pl_freq_left",
+      "subject_ids",
       "t_win"
     ]
   },
@@ -676,7 +692,11 @@
     "script": "figureS7_code.m",
     "path": "figure_data/MEG_results/source_dynamic_gif/motor_gamma_band/topoplot/frame_05_t_m0p60_m0p40_topo.mat",
     "variables": [
-      "frequency",
+      "ot_freq_right",
+      "ot_freq_left",
+      "pl_freq_right",
+      "pl_freq_left",
+      "subject_ids",
       "t_win"
     ]
   },
@@ -684,7 +704,11 @@
     "script": "figureS7_code.m",
     "path": "figure_data/MEG_results/source_dynamic_gif/motor_gamma_band/topoplot/frame_06_t_m0p55_m0p35_topo.mat",
     "variables": [
-      "frequency",
+      "ot_freq_right",
+      "ot_freq_left",
+      "pl_freq_right",
+      "pl_freq_left",
+      "subject_ids",
       "t_win"
     ]
   },
@@ -692,7 +716,11 @@
     "script": "figureS7_code.m",
     "path": "figure_data/MEG_results/source_dynamic_gif/motor_gamma_band/topoplot/frame_07_t_m0p50_m0p30_topo.mat",
     "variables": [
-      "frequency",
+      "ot_freq_right",
+      "ot_freq_left",
+      "pl_freq_right",
+      "pl_freq_left",
+      "subject_ids",
       "t_win"
     ]
   },
@@ -700,7 +728,11 @@
     "script": "figureS7_code.m",
     "path": "figure_data/MEG_results/source_dynamic_gif/motor_gamma_band/topoplot/frame_08_t_m0p45_m0p25_topo.mat",
     "variables": [
-      "frequency",
+      "ot_freq_right",
+      "ot_freq_left",
+      "pl_freq_right",
+      "pl_freq_left",
+      "subject_ids",
       "t_win"
     ]
   },
@@ -708,7 +740,11 @@
     "script": "figureS7_code.m",
     "path": "figure_data/MEG_results/source_dynamic_gif/motor_gamma_band/topoplot/frame_09_t_m0p40_m0p20_topo.mat",
     "variables": [
-      "frequency",
+      "ot_freq_right",
+      "ot_freq_left",
+      "pl_freq_right",
+      "pl_freq_left",
+      "subject_ids",
       "t_win"
     ]
   },
@@ -716,7 +752,11 @@
     "script": "figureS7_code.m",
     "path": "figure_data/MEG_results/source_dynamic_gif/motor_gamma_band/topoplot/frame_10_t_m0p35_m0p15_topo.mat",
     "variables": [
-      "frequency",
+      "ot_freq_right",
+      "ot_freq_left",
+      "pl_freq_right",
+      "pl_freq_left",
+      "subject_ids",
       "t_win"
     ]
   },
@@ -724,7 +764,11 @@
     "script": "figureS7_code.m",
     "path": "figure_data/MEG_results/source_dynamic_gif/motor_gamma_band/topoplot/frame_11_t_m0p30_m0p10_topo.mat",
     "variables": [
-      "frequency",
+      "ot_freq_right",
+      "ot_freq_left",
+      "pl_freq_right",
+      "pl_freq_left",
+      "subject_ids",
       "t_win"
     ]
   },
@@ -732,7 +776,11 @@
     "script": "figureS7_code.m",
     "path": "figure_data/MEG_results/source_dynamic_gif/motor_gamma_band/topoplot/frame_12_t_m0p25_m0p05_topo.mat",
     "variables": [
-      "frequency",
+      "ot_freq_right",
+      "ot_freq_left",
+      "pl_freq_right",
+      "pl_freq_left",
+      "subject_ids",
       "t_win"
     ]
   },
@@ -740,7 +788,11 @@
     "script": "figureS7_code.m",
     "path": "figure_data/MEG_results/source_dynamic_gif/motor_gamma_band/topoplot/frame_13_t_m0p20_0p00_topo.mat",
     "variables": [
-      "frequency",
+      "ot_freq_right",
+      "ot_freq_left",
+      "pl_freq_right",
+      "pl_freq_left",
+      "subject_ids",
       "t_win"
     ]
   },
@@ -748,7 +800,11 @@
     "script": "figureS7_code.m",
     "path": "figure_data/MEG_results/source_dynamic_gif/motor_gamma_band/topoplot/frame_14_t_m0p15_0p05_topo.mat",
     "variables": [
-      "frequency",
+      "ot_freq_right",
+      "ot_freq_left",
+      "pl_freq_right",
+      "pl_freq_left",
+      "subject_ids",
       "t_win"
     ]
   },
@@ -756,7 +812,11 @@
     "script": "figureS7_code.m",
     "path": "figure_data/MEG_results/source_dynamic_gif/motor_gamma_band/topoplot/frame_15_t_m0p10_0p10_topo.mat",
     "variables": [
-      "frequency",
+      "ot_freq_right",
+      "ot_freq_left",
+      "pl_freq_right",
+      "pl_freq_left",
+      "subject_ids",
       "t_win"
     ]
   },

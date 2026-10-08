@@ -46,6 +46,7 @@ previewFrames = false; % Set true to display the first PNGs in Step 6.
 % Conflict-congruent (decision) or right-left (motor) log-power contrasts
 % are averaged over OT/PL within participants, then tested against zero.
 % Uncorrected P<0.05 controls opacity; color represents the t-statistic.
+% Both motor bands use top-level ot_freq_right/ot_freq_left/pl_freq_right/pl_freq_left.
 topoCfg = commonCfg;
 topoCfg.input_dir = fullfile(inputRoot,'topoplot');
 topoCfg.output_file = fullfile(outputRoot,[analysisName '_topoplot.gif']);

@@ -1,57 +1,26 @@
 
-raw_dir='E:\xianliang\matlab_m\social_decision_m\data\OT_all\BHV_MEG_MRS\figure_data\result_repeat_v3\outputs\R2021b_repeat15_full_v1';
-condition_dir=dir([raw_dir,'\*data']);
-
-rep_dir=dir([fullfile(raw_dir,'ots_data'),'\repeat*']);
-for i=1:length(rep_dir)
-    xx_tmp=load(fullfile(rep_dir(i).folder,rep_dir(i).name,'results_all.mat'),'results');
-    os_fit{i,1}=[cat(1,xx_tmp.results.optParams),cat(1,xx_tmp.results.bic),cat(1,xx_tmp.results.nll)];
+% Run this script once per selected analysis; fitting must finish first.
+codeRoot = fileparts(fileparts(mfilename('fullpath')));
+addpath(fullfile(codeRoot,'utilities'));
+if ~exist('bestFitAnalysis','var') || isempty(bestFitAnalysis)
+    bestFitAnalysis = 'full'; % 'full', 'two_lambda', or 'comparison'
 end
-
-rep_dir=dir([fullfile(raw_dir,'pls_data'),'\repeat*']);
-for i=1:length(rep_dir)
-    xx_tmp=load(fullfile(rep_dir(i).folder,rep_dir(i).name,'results_all.mat'),'results');
-    ps_fit{i,1}=[cat(1,xx_tmp.results.optParams),cat(1,xx_tmp.results.bic),cat(1,xx_tmp.results.nll)];
+assert(ismember(bestFitAnalysis,{'full','two_lambda','comparison'}),'Invalid bestFitAnalysis.');
+if exist('bestFitInputDir','var') && ~isempty(bestFitInputDir)
+    raw_dir = bestFitInputDir;
+elseif strcmp(bestFitAnalysis,'full')
+    raw_dir = latest_run_local(fullfile(codeRoot,'analysis_outputs','model_fitting','full'));
+elseif strcmp(bestFitAnalysis,'two_lambda')
+    raw_dir = latest_run_local(fullfile(codeRoot,'analysis_outputs','model_fitting','two_lambda'));
+else
+    raw_dir = latest_run_local(fullfile(codeRoot,'analysis_outputs','model_comparison'));
 end
+% Set bestFitInputDir before running to select a specific RUN_TAG directory.
+outputDir = fullfile(codeRoot,'analysis_outputs','model_results');
+if ~isfolder(outputDir), mkdir(outputDir); end
 
-rep_dir=dir([fullfile(raw_dir,'otn_data'),'\repeat*']);
-for i=1:length(rep_dir)
-    xx_tmp=load(fullfile(rep_dir(i).folder,rep_dir(i).name,'results_all.mat'),'results');
-    on_fit{i,1}=[cat(1,xx_tmp.results.optParams),cat(1,xx_tmp.results.bic),cat(1,xx_tmp.results.nll)];
-end
-
-rep_dir=dir([fullfile(raw_dir,'pln_data'),'\repeat*']);
-for i=1:length(rep_dir)
-    xx_tmp=load(fullfile(rep_dir(i).folder,rep_dir(i).name,'results_all.mat'),'results');
-    pn_fit{i,1}=[cat(1,xx_tmp.results.optParams),cat(1,xx_tmp.results.bic),cat(1,xx_tmp.results.nll)];
-end
-
-%%
-os_fit( all(cellfun(@isempty,os_fit),2))=[];
-ps_fit( all(cellfun(@isempty,ps_fit),2))=[];
-on_fit( all(cellfun(@isempty,on_fit),2))=[];
-pn_fit( all(cellfun(@isempty,pn_fit),2))=[];
-
-os_fit0=cell(length(os_fit{1}),1);ps_fit0=cell(length(os_fit{1}),1);
-on_fit0=cell(length(os_fit{1}),1);pn_fit0=cell(length(os_fit{1}),1);
-for i=1:length(os_fit{1})
-    for j=1:length(os_fit)
-        os_fit0{i,1}(j,:)=os_fit{j}(i,:);
-    end
-    for j=1:length(ps_fit)
-        ps_fit0{i,1}(j,:)=ps_fit{j}(i,:);
-    end
-    for j=1:length(on_fit)
-        on_fit0{i,1}(j,:)=on_fit{j}(i,:);
-    end
-    for j=1:length(pn_fit)
-        pn_fit0{i,1}(j,:)=pn_fit{j}(i,:);
-    end
-end
-
-% all
-os_fit1 = os_fit0;ps_fit1 = ps_fit0;on_fit1 = on_fit0;pn_fit1 = pn_fit0;
-
+if strcmp(bestFitAnalysis,'full')
+[os_fit1,ps_fit1,on_fit1,pn_fit1] = read_repeats_local(raw_dir);
 %% FOR FULL MODEL (NINE PARAMETER)
 os_fit2=cell(length(os_fit1),1);ps_fit2=cell(length(ps_fit1),1);
 on_fit2=cell(length(on_fit1),1);pn_fit2=cell(length(pn_fit1),1);
@@ -66,15 +35,7 @@ for i=1:length(os_fit1)
     pn_fit2{i,1}=sortrows(pn_fit1{i}(pn_valid0,:),10);
 end
 
-function os_valid0=getNoExtrmeFitParams(os_fit1)
-lb = [0.001, 0, 0, 0.001, 0.001, 0.1, 1e-5, 10, 10];
-ub = [0.99, 1, 1, 10, 10, 20, 0.15, 1000, 1000]; % Reduceτ,t0 upper bound
-os_valid=zeros(size(os_fit1,1),length(lb));
-for j=[1:7 8 9]
-    os_valid(:,j)=os_fit1(:,j)==lb(j) | os_fit1(:,j)==ub(j);
-end
-os_valid0=sum(os_valid,2)<=1;
-end
+
 
 
 %
@@ -131,14 +92,20 @@ for i=1:9
 end
 
 
-%% model compare： bic \ aic \ nll
-raw_dir='E:\xianliang\matlab_m\social_decision_m\data\OT_all\BHV_MEG_MRS\figure_data\result_R2021_compare_v4\outputs\R2021b_compare_v4';
+save(fullfile(outputDir,'model_fit_parameter_85.mat'),'ots_minb1','pls_minb1','otn_minb1','pln_minb1');
+end
 
-rep_dir=dir([fullfile(raw_dir,'ots_data'),'\*_*']);
-bic_os=nan(length(rep_dir),20,85);nll_os=nan(length(rep_dir),20,85);aic_os=nan(length(rep_dir),20,85);
+if strcmp(bestFitAnalysis,'comparison')
+%% model compare： bic \ aic \ nll
+
+rep_dir=dir(fullfile(raw_dir,'ots_data','*_*'));
+bic_os=nan(length(rep_dir),count_repeats_local(raw_dir),85);nll_os=bic_os;aic_os=bic_os;
 for i=1:length(rep_dir)
-    rep_dir1=dir([fullfile(rep_dir(i).folder,rep_dir(i).name),'\repeat_*']);
+    rep_dir1=dir(fullfile(rep_dir(i).folder,rep_dir(i).name,'repeat_*'));
+    assert(~isempty(rep_dir1),'No repeat folders for comparison model.');
     for j=1:length(rep_dir1)
+        assert(isfile(fullfile(rep_dir1(j).folder,rep_dir1(j).name,'results_all.mat')), ...
+            'Incomplete comparison run: results_all.mat is missing.');
         if isfile(fullfile(rep_dir1(j).folder,rep_dir1(j).name,'results_all.mat'))
             xx_tmp=load(fullfile(rep_dir1(j).folder,rep_dir1(j).name,'results_all.mat'),'results');
             os_fit{i,j}=[cat(1,xx_tmp.results.optParams_FullArray),cat(1,xx_tmp.results.bic),cat(1,xx_tmp.results.nll)];
@@ -147,14 +114,18 @@ for i=1:length(rep_dir)
             aic_os(i,j,:)=cat(1,xx_tmp.results.nll).*2+2*(10-i);            
         end
     end
+    assert(exist('xx_tmp','var') == 1,'No completed fits for comparison model.');
     os_fit{i,j+1}=xx_tmp.results(1).modelName;
 end
 
-rep_dir=dir([fullfile(raw_dir,'pls_data'),'\*_*']);
-bic_ps=nan(length(rep_dir),20,85);nll_ps=nan(length(rep_dir),20,85);aic_ps=nan(length(rep_dir),20,85);
+rep_dir=dir(fullfile(raw_dir,'pls_data','*_*'));
+bic_ps=nan(length(rep_dir),count_repeats_local(raw_dir),85);nll_ps=bic_ps;aic_ps=bic_ps;
 for i=1:length(rep_dir)
-    rep_dir1=dir([fullfile(rep_dir(i).folder,rep_dir(i).name),'\repeat_*']);
+    rep_dir1=dir(fullfile(rep_dir(i).folder,rep_dir(i).name,'repeat_*'));
+    assert(~isempty(rep_dir1),'No repeat folders for comparison model.');
     for j=1:length(rep_dir1)
+        assert(isfile(fullfile(rep_dir1(j).folder,rep_dir1(j).name,'results_all.mat')), ...
+            'Incomplete comparison run: results_all.mat is missing.');
         if isfile(fullfile(rep_dir1(j).folder,rep_dir1(j).name,'results_all.mat'))
             xx_tmp=load(fullfile(rep_dir1(j).folder,rep_dir1(j).name,'results_all.mat'),'results');
             ps_fit{i,j}=[cat(1,xx_tmp.results.optParams_FullArray),cat(1,xx_tmp.results.bic),cat(1,xx_tmp.results.nll)];
@@ -163,14 +134,18 @@ for i=1:length(rep_dir)
             aic_ps(i,j,:)=cat(1,xx_tmp.results.nll).*2+2*(10-i);
         end
     end
+    assert(exist('xx_tmp','var') == 1,'No completed fits for comparison model.');
     ps_fit{i,j+1}=xx_tmp.results(1).modelName;
 end
 %
-rep_dir=dir([fullfile(raw_dir,'otn_data'),'\*_*']);
-bic_on=nan(length(rep_dir),20,85);nll_on=nan(length(rep_dir),20,85);aic_on=nan(length(rep_dir),20,85);
+rep_dir=dir(fullfile(raw_dir,'otn_data','*_*'));
+bic_on=nan(length(rep_dir),count_repeats_local(raw_dir),85);nll_on=bic_on;aic_on=bic_on;
 for i=1:length(rep_dir)
-    rep_dir1=dir([fullfile(rep_dir(i).folder,rep_dir(i).name),'\repeat_*']);
+    rep_dir1=dir(fullfile(rep_dir(i).folder,rep_dir(i).name,'repeat_*'));
+    assert(~isempty(rep_dir1),'No repeat folders for comparison model.');
     for j=1:length(rep_dir1)
+        assert(isfile(fullfile(rep_dir1(j).folder,rep_dir1(j).name,'results_all.mat')), ...
+            'Incomplete comparison run: results_all.mat is missing.');
         if isfile(fullfile(rep_dir1(j).folder,rep_dir1(j).name,'results_all.mat'))
             xx_tmp=load(fullfile(rep_dir1(j).folder,rep_dir1(j).name,'results_all.mat'),'results');
             on_fit{i,j}=[cat(1,xx_tmp.results.optParams_FullArray),cat(1,xx_tmp.results.bic),cat(1,xx_tmp.results.nll)];
@@ -179,14 +154,18 @@ for i=1:length(rep_dir)
             aic_on(i,j,:)=cat(1,xx_tmp.results.nll).*2+2*(10-i);
         end
     end
+    assert(exist('xx_tmp','var') == 1,'No completed fits for comparison model.');
     on_fit{i,j+1}=xx_tmp.results(1).modelName;
 end
 %
-rep_dir=dir([fullfile(raw_dir,'pln_data'),'\*_*']);
-bic_pn=nan(length(rep_dir),20,85);nll_pn=nan(length(rep_dir),20,85);aic_pn=nan(length(rep_dir),20,85);
+rep_dir=dir(fullfile(raw_dir,'pln_data','*_*'));
+bic_pn=nan(length(rep_dir),count_repeats_local(raw_dir),85);nll_pn=bic_pn;aic_pn=bic_pn;
 for i=1:length(rep_dir)
-    rep_dir1=dir([fullfile(rep_dir(i).folder,rep_dir(i).name),'\repeat_*']);
+    rep_dir1=dir(fullfile(rep_dir(i).folder,rep_dir(i).name,'repeat_*'));
+    assert(~isempty(rep_dir1),'No repeat folders for comparison model.');
     for j=1:length(rep_dir1)
+        assert(isfile(fullfile(rep_dir1(j).folder,rep_dir1(j).name,'results_all.mat')), ...
+            'Incomplete comparison run: results_all.mat is missing.');
         if isfile(fullfile(rep_dir1(j).folder,rep_dir1(j).name,'results_all.mat'))
             xx_tmp=load(fullfile(rep_dir1(j).folder,rep_dir1(j).name,'results_all.mat'),'results');
             pn_fit{i,j}=[cat(1,xx_tmp.results.optParams_FullArray),cat(1,xx_tmp.results.bic),cat(1,xx_tmp.results.nll)];
@@ -195,6 +174,7 @@ for i=1:length(rep_dir)
             aic_pn(i,j,:)=cat(1,xx_tmp.results.nll).*2+2*(10-i);
         end
     end
+    assert(exist('xx_tmp','var') == 1,'No completed fits for comparison model.');
     pn_fit{i,j+1}=xx_tmp.results(1).modelName;
 end
 
@@ -219,7 +199,7 @@ mc_aic.pn=squeeze(min(aic_pn(:,:,:),[],2))';
 [~,tmp]=min(bic_on(:,:,:),[],2);idx_bic.on=squeeze(tmp);
 [~,tmp]=min(bic_pn(:,:,:),[],2);idx_bic.pn=squeeze(tmp);
 %
-save('E:\xianliang\matlab_m\social_decision_m\data\OT_all\BHV_MEG_MRS\figure_data\model_compare_data.mat','mc_bic','mc_aic','mc_nll');
+save(fullfile(outputDir,'model_compare_data.mat'),'mc_bic','mc_aic','mc_nll');
 
 
 
@@ -235,6 +215,10 @@ save('E:\xianliang\matlab_m\social_decision_m\data\OT_all\BHV_MEG_MRS\figure_dat
 
 
 
+end
+
+if strcmp(bestFitAnalysis,'two_lambda')
+[os_fit1,ps_fit1,on_fit1,pn_fit1] = read_repeats_local(raw_dir);
 %% FOR bidirectional inhibition MODEL
 os_fit2=cell(length(os_fit1),1);ps_fit2=cell(length(ps_fit1),1);
 on_fit2=cell(length(on_fit1),1);pn_fit2=cell(length(pn_fit1),1);
@@ -249,15 +233,7 @@ for i=1:length(os_fit1)
     pn_fit2{i,1}=sortrows(pn_fit1{i}(pn_valid0,:),11);
 end
 
-function os_valid0=getNoExtrmeFitParams2(os_fit1)
-lb = [0.001, 0, 0, 0.001, 0.001, 0.1, 1e-5,1e-5, 10, 10];
-ub = [0.99, 1, 1, 10, 10, 20, 0.15,0.15, 1000, 1000]; % Reduceτ,t0 upper bound
-os_valid=zeros(size(os_fit1,1),length(lb));
-for j=[1:7 8 9 10]
-    os_valid(:,j)=os_fit1(:,j)==lb(j) | os_fit1(:,j)==ub(j);
-end
-os_valid0=sum(os_valid,2)<=1;
-end
+
 
 
 %%
@@ -280,7 +256,7 @@ for i=1:length(os_fit2)
     otn_minb1=cat(1,otn_minb1,otn_tmp);
 
     pln_tmp.optParams=pn_fit2{i}(1,1:10);
-    pln_tmp.bic=pn_fit2{i}(1,12);
+    pln_tmp.bic=pn_fit2{i}(1,11);
     pln_tmp.nll=pn_fit2{i}(1,12);
     pln_minb1=cat(1,pln_minb1,pln_tmp);    
     
@@ -322,6 +298,29 @@ end
 
 
 
+
+save(fullfile(outputDir,'twolambda_model_fit_parameter_85.mat'),'ots_minb1','pls_minb1','otn_minb1','pln_minb1');
+end
+
+function os_valid0=getNoExtrmeFitParams(os_fit1)
+lb = [0.001, 0, 0, 0.001, 0.001, 0.1, 1e-5, 10, 10];
+ub = [0.99, 1, 1, 10, 10, 20, 0.15, 1000, 1000]; % Reduceτ,t0 upper bound
+os_valid=zeros(size(os_fit1,1),length(lb));
+for j=[1:7 8 9]
+    os_valid(:,j)=os_fit1(:,j)==lb(j) | os_fit1(:,j)==ub(j);
+end
+os_valid0=sum(os_valid,2)<=1;
+end
+
+function os_valid0=getNoExtrmeFitParams2(os_fit1)
+lb = [0.001, 0, 0, 0.001, 0.001, 0.1, 1e-5,1e-5, 10, 10];
+ub = [0.99, 1, 1, 10, 10, 20, 0.15,0.15, 1000, 1000]; % Reduceτ,t0 upper bound
+os_valid=zeros(size(os_fit1,1),length(lb));
+for j=[1:7 8 9 10]
+    os_valid(:,j)=os_fit1(:,j)==lb(j) | os_fit1(:,j)==ub(j);
+end
+os_valid0=sum(os_valid,2)<=1;
+end
 
 %%  two pair data,distribution+boxplot+scatter+lineconnect
 function figureTmp1(xx1, ot_color)
@@ -780,3 +779,38 @@ end
 
 
 
+
+function runDir = latest_run_local(parentDir)
+    candidates = dir(parentDir);
+    candidates = candidates([candidates.isdir] & ~ismember({candidates.name},{'.','..'}));
+    assert(~isempty(candidates),'No fitted runs under %s. Run the corresponding fitting entry point first.',parentDir);
+    [~,index] = max([candidates.datenum]);
+    runDir = fullfile(candidates(index).folder,candidates(index).name);
+end
+
+function [os,ps,on,pn] = read_repeats_local(runDir)
+    names = {'ots_data','pls_data','otn_data','pln_data'};
+    allData = cell(1,4);
+    for c = 1:4
+        files = dir(fullfile(runDir,names{c},'repeat_*','results_all.mat'));
+        assert(~isempty(files),'Missing repeated fits for %s under %s.',names{c},runDir);
+        repeats = cell(numel(files),1);
+        for r = 1:numel(files)
+            fit = load(fullfile(files(r).folder,files(r).name),'results');
+            repeats{r} = [cat(1,fit.results.optParams),cat(1,fit.results.bic),cat(1,fit.results.nll)];
+            assert(size(repeats{r},1)==85,'Expected 85 completed participant fits.');
+        end
+        allData{c} = cell(85,1);
+        for participant = 1:85
+            allData{c}{participant} = cell2mat(cellfun(@(x)x(participant,:),repeats,'UniformOutput',false));
+        end
+    end
+    os=allData{1};ps=allData{2};on=allData{3};pn=allData{4};
+end
+
+function n = count_repeats_local(runDir)
+    files = dir(fullfile(runDir,'ots_data','*_*','repeat_*','results_all.mat'));
+    assert(~isempty(files),'No completed comparison fits under %s.',runDir);
+    n = max(cellfun(@(x)str2double(regexp(x,'(?<=repeat_)\d+$','match','once')), ...
+        {files.folder}));
+end

@@ -176,7 +176,7 @@ end
 % set(box_lines, 'LineWidth', line_width);
 
 % =========================================================
-% 5. 动态调整的箱线图
+% 5. Adaptively sized box plots
 % =========================================================
 boxplot(xx, 'Positions', x_box, 'Color', [1 1 1], 'Widths', cfg.w_box, 'Symbol', '');
 boxObj = findobj(gca, 'Tag', 'Box'); 

@@ -9,10 +9,10 @@ f_file = [fullfile(codeRoot,'figure_outputs','figureS7') filesep];
 if ~isfolder(f_file)
     mkdir(f_file);
 end
-assert(exist('ft_freqgrandaverage','file') == 2, ...
+assert(exist('ft_topoplotER','file') == 2, ...
     'Configure FieldTrip first: run setup_figure_paths(fieldtripRoot) from the package root.');
 
-%% figure S7A-D
+%% figure S7A-D: scalp GIFs
 % (A and B) Sensor topographies and source maps of decision-related 
 % conflict-specific gamma-band (A) and beta-band (B) activity. 
 % (C and D) The corresponding maps of motor-related gamma-band (C) and 
@@ -20,9 +20,17 @@ assert(exist('ft_freqgrandaverage','file') == 2, ...
 % topoplot 
 names = {'decision_gamma_band','decision_beta_band', ...
          'motor_gamma_band','motor_beta_band'};
+topoplotResults = cell(size(names));
 for k = 1:numel(names)
-    result = topoplot_sliding_window_gif(names{k});
+    % Motor gamma and beta use the same four top-level power variables.
+    gifCfg = struct();
+    gifCfg.input_dir = fullfile(dataRoot,'MEG_results','source_dynamic_gif',names{k},'topoplot');
+    gifCfg.output_file = fullfile(f_file,[names{k} '_topoplot.gif']);
+    topoplotResults{k} = topoplot_sliding_window_gif(names{k},gifCfg);
+    assert(topoplotResults{k}.frame_count == 15,'Expected 15 scalp frames.');
 end
+
+%% figure S7A-D: source GIFs
 % source map
 % SPM12 is resolved from this host's MATLAB path; configure it before running.
 assert(exist('spm','file') == 2, ...
@@ -136,7 +144,7 @@ plot_column_significance(all_tfr_diff2.time(time_idx),squeeze(mean(all_tfr_diff2
 xline(0,'k--','LineWidth',1.5);yline(0,'k--','LineWidth',1.5);ylim([-0.14 0.20]);
 setFixedPlotArea(ax1, [15 15],[1.8 0.8]);set(gca, 'LineWidth', 1.5,'XDir','normal'); 
 hold off;xlim([-1 0.5]);
-ylabel(sprintf('power(log)\n left-right'));
+ylabel(sprintf('power(log)\n right-left'));
 xlabel('time from choice made');
 gcaf1(gca,35);setAxesForPPT(ax1, 44, 2.5);
 print(gcf,[f_file,'motor_source_time-course_(13-30hz)'], '-dsvg','-vector','-r600');
@@ -154,7 +162,7 @@ plot_column_significance(all_tfr_diff2.time(time_idx),squeeze(mean(all_tfr_diff2
 xline(0,'k--','LineWidth',1.5);yline(0,'k--','LineWidth',1.5);ylim([-0.02 0.12]);yticks([0 0.06 0.12])
 setFixedPlotArea(ax1, [15 15],[1.8 0.8]);set(gca, 'LineWidth', 1.5,'XDir','normal'); 
 hold off;xlim([-1 0.5]);
-ylabel(sprintf('power(log)\n left-right'));
+ylabel(sprintf('power(log)\n right-left'));
 xlabel('time from choice made');
 gcaf1(gca,35);setAxesForPPT(ax1, 44, 2.5);
 print(gcf,[f_file,'motor_source_time-course_(60-70hz)'], '-dsvg','-vector','-r600');
@@ -162,7 +170,7 @@ print(gcf,[f_file,'motor_source_time-course_(60-70hz)'], '-dsvg','-vector','-r60
 
 %% figure S7I
 load(fullfile(dataRoot,'MEG_results','motor_beta_band_sourceTFR.mat'));
-[~,~, high_ps_tfr_diff,high_on_tfr_diff,high_pn_tfr_diff] = ...
+[~,high_os_tfr_diff, high_ps_tfr_diff,high_on_tfr_diff,high_pn_tfr_diff] = ...
     getConstractPower(all_tfr_right,all_tfr_left,os_tfr_right,os_tfr_left, ...
         ps_tfr_right,ps_tfr_left,on_tfr_right,on_tfr_left,pn_tfr_right,pn_tfr_left);
 
@@ -180,7 +188,7 @@ end
 xx1=[os_vtfr,ps_vtfr,on_vtfr,pn_vtfr];
 ax1=figureX1([24 20]);
 x_pos=figureTmp1_OT(xx1,1);
-box off;ylabel(sprintf('power(log)\n conflict—congruent'));
+box off;ylabel(sprintf('power(log)\n right-left'));
 set(gca,'XTick',x_pos,'XTickLabel',{'OT','PL','OT','PL'}); gcaf1(gca,35);
 setFixedPlotArea(ax1, [15 15]);setAxesForPPT(ax1, 35, 2.5);
 cutBackColor(gca,gcf);print(gcf,[f_file,'motor_beta_tfr_interaction(13-30hz)'], '-dsvg','-vector','-r600');
@@ -206,7 +214,7 @@ end
 xx1=[os_vtfr,ps_vtfr,on_vtfr,pn_vtfr];
 ax1=figureX1([24 20]);
 x_pos=figureTmp1_OT(xx1,1);
-box off;ylabel(sprintf('power(log)\n conflict—congruent'));
+box off;ylabel(sprintf('power(log)\n right-left'));
 set(gca,'XTick',x_pos,'XTickLabel',{'OT','PL','OT','PL'}); gcaf1(gca,35);
 setFixedPlotArea(ax1, [15 15]);setAxesForPPT(ax1, 35, 2.5);
 cutBackColor(gca,gcf);print(gcf,[f_file,'motor_gamma_tfr_interaction(40-70hz)'], '-dsvg','-vector','-r600');

@@ -194,8 +194,6 @@ end
 
 head_mov = load(cfg_main.head_movement_file, ...
     'optimal_idx','isolated_bad_run');
-% Project-specific audited corrections retained from the current script.
-% Project-specific audited correction retained from the latest script.
 head_mov.isolated_bad_run.ot{18} = [3 6];
 assert(isfield(head_mov,'optimal_idx') && ...
     isfield(head_mov,'isolated_bad_run'));
