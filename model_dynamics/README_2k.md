@@ -1,4 +1,4 @@
-# Two-k model trajectories for MEG
+# Model trajectories for MEG cohort
 
 This module uses independently fitted parameters from 85 participants for a two-stage empirical-Bayes approximation, then generates corresponding model trajectories for 19 MEG participants. Dependencies: MATLAB R2024b, Statistics and Machine Learning Toolbox, and Parallel Computing Toolbox.
 
