@@ -72,17 +72,19 @@ tidx_base = efr_glm.baseline_time >= 0 & efr_glm.baseline_time <= 0.2;
 base_iti=squeeze(mean(efr_glm.beta_bias_base(:,:,:,tidx_base,2),[1 4],'omitnan'));
 tidx = efr_glm.sensor_time >= -0.5 & efr_glm.sensor_time <= -0.3;
 sub_beta = squeeze(mean(efr_glm.beta_bias(:,:,:,tidx,2), [1 4], 'omitnan'))-base_iti;
+[~,~,~,tmp] = ttest(sub_beta);
+sub_dataT = tmp.tstat;
 % Wrap in FieldTrip timelock format
 topo = [];
 topo.label = regexprep(efr_glm.sensor_label(:), '\+MEG', '+');
 topo.time = 0;
-topo.avg = mean(sub_beta, 1, 'omitnan')';
-topo.avg_base = mean(base_iti, 1, 'omitnan')';
+topo.avg = sub_dataT';
+topo.avg_base = sub_beta';
 topo.dimord = 'chan_time';
 % 
 cfg = [];
 cfg.xlim         =[-0.5 -0.3];
-cfg.zlim         = [-0.02 0.02];
+cfg.zlim         = [-2.6 2.6];
 cfg.marker       = 'off';
 cfg.layout       = 'neuromag306cmb.lay';
 cfg.comment      = 'no';
